@@ -8,10 +8,16 @@
     <title>Globomantics Bug Tracker</title>
   </head>
   <body>
-    <h1 class="title">New Bug</h1>
+    <h1 class="title">New Bug ejs</h1>
     <h3 class="navLink"><a href="/">Find Bugs</a></h3>
-    <div id="root">
-        <%- markup %>
-    </div>
+    <div id="root"><%- markup %></div>
+    <script type="module" src="/dist/NewBugSSR.jsx"></script>
+    <script type="module" src="/dist/secret.js"></script>
+    <script>
+      //window.CONFIG = <%- JSON.stringify(config) %>;
+    </script>
+    <% if(req.query.footnote) { %>
+    <footer><%= req.query.footnote %></footer>
+    <% } %>
   </body>
 </html>

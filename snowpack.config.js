@@ -1,6 +1,6 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 
-import proxy from "http2-proxy";
+const proxy = require("http2-proxy");
 
 module.exports = {
   mount: {
@@ -16,7 +16,6 @@ module.exports = {
   ],
 
   plugins: [],
-  routes: [],
   optimize: {},
   packageOptions: {},
   devOptions: {
